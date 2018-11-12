@@ -4,7 +4,7 @@ import '../styles/main.scss'
 export default () => (
   <div>
     <Head>
-      <title>next-starter</title>
+      <title>Unmapped</title>
     </Head>
   </div>
 )
