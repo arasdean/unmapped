@@ -7,7 +7,7 @@ export default class extends Component {
       <div>
         <Layout>
           <main>
-            <h1>Unmapped. </h1>
+            <h1>Unmapped. A friend in every city. </h1>
           </main>
         </Layout>
       </div>
