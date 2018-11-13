@@ -1,17 +1,17 @@
 .info-section {
     display: block;
-    text-align: center;
     align-items: center;
     justify-content: center;
 }
 
 .info-section__main-header {
     padding-top: 10px;
+    text-align: center;
 }
 
 .info-block {
     height: auto;
-    width: 940px;
+    width: 1020px;
     margin: 50px auto;
 }
 
@@ -52,6 +52,10 @@
     background-size: cover, cover;  
 }
 
-.item.content {
+.item-content {
     margin-bottom: 20px;
+}
+
+.item__text {
+    color: gray;
 }
