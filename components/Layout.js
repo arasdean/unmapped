@@ -1,12 +1,16 @@
-import NavBar from './NavBar'; 
+import NavBar from './NavBar';
+import styled from 'styled-components'; 
 import Meta from './Meta';
 
 const Layout = (props) => (
-    <div>
-        <Meta /> 
+    <Container> 
+        <Meta />
         <NavBar /> 
         {props.children}
-    </div>
+    </Container> 
 )
+
+const Container = styled.div``;
+
 
 export default Layout;
