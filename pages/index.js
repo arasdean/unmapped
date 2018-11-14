@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from "styled-components";
 import Layout from '../components/Layout';
 import InfoSection from '../components/InfoSection';
+import LocationSection from '../components/LocationSection';
 import HeroSection from '../components/HeroSection';
 
 export default class extends Component {
@@ -10,6 +11,7 @@ export default class extends Component {
       <React.Fragment>
         <HeroSection />
         <InfoSection />
+        <LocationSection />
       </React.Fragment>
     )
   }
