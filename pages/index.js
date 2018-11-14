@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled from "styled-components"; 
+import styled from "styled-components";
 import Layout from '../components/Layout';
 import InfoSection from '../components/InfoSection';
 import HeroSection from '../components/HeroSection';
@@ -7,18 +7,13 @@ import HeroSection from '../components/HeroSection';
 export default class extends Component {
   render() {
     return (
-      <div>
-        <Layout>
-          <main>
-            <h1>Unmapped. </h1>
-            <HeroSection />
-            <InfoSection />
-          </main>
-        </Layout>
-      </div>
+      <React.Fragment>
+        <HeroSection />
+        <InfoSection />
+      </React.Fragment>
     )
   }
-}; 
+};
 
 
 let Div = styled.div`
