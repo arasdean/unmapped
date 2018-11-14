@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
 import styled from "styled-components"; 
 import Layout from '../components/Layout';
+import InfoSection from '../components/InfoSection';
 import HeroSection from '../components/HeroSection';
 
 export default class extends Component {
   render() {
     return (
       <div>
-        <Div> 
-         <Layout>
+        <Layout>
+          <main>
+            <h1>Unmapped. </h1>
             <HeroSection />
+            <InfoSection />
+          </main>
         </Layout>
         </Div> 
       </div>
