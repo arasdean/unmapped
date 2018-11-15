@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
 import SearchBox from './SearchBox'; 
-import '../styles/hero.scss';
+import '../styles/_hero.scss';
 
 const HeroSection = (props) => (
     <div class="hero_section">
