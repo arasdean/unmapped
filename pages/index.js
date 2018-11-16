@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import styled from "styled-components";
-import Layout from '../components/Layout';
 import InfoSection from '../components/InfoSection';
 import LocationSection from '../components/LocationSection';
 import HeroSection from '../components/HeroSection';
 import GuidesSection from '../components/GuidesSection';
+import Footer from '../components/Footer';
 
 export default class extends Component {
   render() {
@@ -14,6 +14,7 @@ export default class extends Component {
         <InfoSection />
         <LocationSection />
         <GuidesSection />
+        <Footer />
       </React.Fragment>
     )
   }
