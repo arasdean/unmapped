@@ -4,6 +4,7 @@ import InfoSection from '../components/InfoSection';
 import LocationSection from '../components/LocationSection';
 import HeroSection from '../components/HeroSection';
 import GuidesSection from '../components/GuidesSection';
+import CopyrightFoot from '../components/CopyrightFoot';
 
 export default class extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class extends Component {
         <InfoSection />
         <LocationSection />
         <GuidesSection />
+        <CopyrightFoot />
       </React.Fragment>
     )
   }
