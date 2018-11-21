@@ -1,5 +1,6 @@
 import TravelSummary from "../components/TravelSummary";
 import Layout from "../components/Layout";
+import Router from 'next/router';
 
 export default class summary extends React.Component {
     state = {
@@ -16,16 +17,21 @@ export default class summary extends React.Component {
 
     render() {
         return (
-            <Layout>
+            <Layout type='form'>
                 <h1 className="header">Personal Information</h1>
                 <div className="dashboard">
-                    <div className="col personal-info">
-                        <div className="contact-header">Contact Data</div>
-                        <div className="email-form">
-                            <input id="contactMail" className="contact-input" type="email" placeholder="Email Address" />
-                            <input id="contactNumber" className="contact-input" type="text" placeholder="Phone Number" />
+                    <div className="dashboard-left">
+                        <div className="col personal-info">
+                            <div className="contact-header">Contact Data</div>
+                            <div className="email-form">
+                                <input id="contactMail" className="contact-input" type="email" placeholder="Email Address" />
+                                <input id="contactNumber" className="contact-input" type="text" placeholder="Phone Number" />
+                            </div>
+                            <input id="confirmMail" className="contact-input" type="email" placeholder="Confirm Email Address" /> 
                         </div>
-                        <input id="confirmMail" className="contact-input" type="email" placeholder="Confirm Email Address" /> 
+                        <button onClick={() => {
+                            Router.push('/')
+                        }} className="submit-button">LET'S GO</button>
                     </div>
                     <div className="col summary">
                         <TravelSummary data={Object.assign({}, this.state)} />
