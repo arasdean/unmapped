@@ -1,5 +1,86 @@
+$green: #2cb066;
+
 .dashboard {
     display: flex;
-    align-items: center;
-    background: pink;
+    justify-content: space-evenly;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.summary {
+    background: $green;
+    padding: 15px;
+    color: #ffffff;
+}
+
+.summary-section {
+    margin-bottom: 40px;
+}
+
+.subheader {
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.summary-header {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+
+.summary-total {
+    font-size: 25px;
+}
+
+.gray-line {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.fees {
+    margin-bottom: 10px;
+}
+
+.personal-info {
+    border: 2px solid black;
+    padding: 15px;
+    width: 50%;
+    height: 300px;
+}
+
+.contact-header {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.contact-input {
+    border: none;
+    border-bottom: 2px solid #eee;
+    margin: 20px 5px;
+    width: 45%;
+    padding-bottom: 20px;
+}
+
+.contact-input:focus {
+    border-bottom: 2px solid $green;
+}
+
+.email-form {
+    display: flex;
+    justify-content: space-between;
 }
