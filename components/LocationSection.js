@@ -14,7 +14,9 @@ const LocationSection = () => (
                 <div className="location-description">
                     <h1 className="location-subheader">New York, NY</h1>
                     <Link href="/summary">
-                        <a>Baton</a>
+                        <a style={{
+                            opacity: 0
+                        }}>Baton</a>
                     </Link>
                 </div>
             </div>
