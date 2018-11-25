@@ -1,0 +1,52 @@
+.location-box {
+    display: block;
+    align-content: center;
+    justify-content: center;
+    padding-top: 10px;
+    background-color: #f5f5f5;
+}
+
+.location-header {
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.location-width-container {
+    display: flex;
+    justify-content: center;
+}
+
+.first-location {
+    display: flex;
+    align-items: flex-start;
+    background-color: #e62c56;
+    background-image: linear-gradient(180deg, rgba(0, 150, 255, .4), rgba(0, 150, 255, .4)), url("https://uploads-ssl.webflow.com/5bd9587049a1428ded8eddaf/5bda87aceda01d798c2841ad_pexels-photo-196642.jpeg");
+    background-position: 0px 0px, 0px 0px;
+    background-size: auto, cover;
+    justify-content: center;
+}
+
+._2-col {
+    height: 400px;
+    width: 50%;
+}
+
+.location-description {
+    width: 400px;
+    height: auto;
+    margin-top: 30px;
+}
+
+.location-subheader {
+    color: #f5f5f5;
+}
+
+.second-location {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .52), rgba(0, 0, 0, .52)), url("https://uploads-ssl.webflow.com/5bd9587049a1428ded8eddaf/5bda880feda01dfb672841c2_pexels-photo-1486222.jpeg");
+    background-position: 0px 0px, 0px 0px;
+    background-size: auto, cover;
+}
+
