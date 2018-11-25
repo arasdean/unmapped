@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
-import Summary from "./pages/Summary";
+import MainForm from "./components/MainForm";
 // import MainForm from "./components/MainForm.jsx";
 // import Roster from "./Roster";
 // import Schedule from "./Schedule";
@@ -15,7 +15,7 @@ const Main = () => (
   <main>
     <Switch>
       <Route exact path="/" component={HeroSection} />
-      <Route path="/form" component={Summary} />
+      <Route path="/form" component={MainForm} />
     </Switch>
   </main>
 );
