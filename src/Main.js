@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import HeroSection from "./components/HeroSection";
 import MainForm from "./components/MainForm";
+import LandingPage from "./pages/LandingPage";
 // import MainForm from "./components/MainForm.jsx";
 // import Roster from "./Roster";
 // import Schedule from "./Schedule";
@@ -14,7 +14,7 @@ import MainForm from "./components/MainForm";
 const Main = () => (
   <main>
     <Switch>
-      <Route exact path="/" component={HeroSection} />
+      <Route exact path="/" component={LandingPage} />
       <Route path="/form" component={MainForm} />
     </Switch>
   </main>
