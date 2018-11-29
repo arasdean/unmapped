@@ -4,6 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import './styles/main.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'normalize.css/normalize.css';
+
 
 ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
 
