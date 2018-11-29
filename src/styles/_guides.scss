@@ -41,7 +41,7 @@ text-transform: uppercase;
 }
 
 .team3-avatar.team3-avatar-image2 {
-    background-image: url('/static/Person-Pic-12x.jpg');
+    background-image: url('../static/Person-Pic-12x.jpg');
 }
 
 .team3-name {
@@ -148,4 +148,7 @@ box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
     padding-top: 7px;
   }
 
-  
+  .team3-position {
+      margin-bottom: 8px;
+  }
+
