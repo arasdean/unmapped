@@ -5,6 +5,7 @@ const NavBarForms = () => (
     <div class="nav_section">
         <img 
             src={logo} 
+            alt='unmapped.io'
             style={{
                 marginLeft: '40px'
             }} 
