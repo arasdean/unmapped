@@ -8,6 +8,7 @@ import Success from "./Success";
 class MainForm extends Component {
   state = {
     step: 1,
+    guide: null, 
     interests: null,
     lastName: "",
     email: "",
@@ -39,6 +40,10 @@ class MainForm extends Component {
     this.setState({ [f]: v });
   }
 
+  guideHandler = (guide) => {
+    this.setState({guide: guide})
+  }
+
   render() {
     const { step } = this.state;
     const { firstName, lastName, email, age, city, country, interests } = this.state;
@@ -63,7 +68,7 @@ class MainForm extends Component {
             <PersonalDetails
               nextStep={this.nextStep}
               prevStep={this.prevStep}
-              handleChange={this.handleChange}
+              handleChange={this.guideHandler}
               values={values}
             />
           </FormLayout>

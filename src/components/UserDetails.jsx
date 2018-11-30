@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+import { Form, Button } from 'antd';
 import Grid from './Grid';
 import 'antd/dist/antd.css';
 import '../styles/pages.scss';
@@ -7,16 +7,16 @@ const FormItem = Form.Item;
 
 const data = [
     [
-      { name: "chicken", value: 0 },
-      { name: "beef", value: 1 },
-      { name: "tuna", value: 2 }
+      { name: "chicken", key: 0 },
+      { name: "beef", key: 1 },
+      { name: "tuna", key: 2 }
     ],
     [
-      { name: "test", value: 3 },
-      { name: "tset", value: 4 },
-      { name: "sett", value: 5 }
+      { name: "test", key: 3 },
+      { name: "tset", key: 4 },
+      { name: "sett", key: 5 }
     ],
-    [{ name: "a", value: 6 }, { name: "b", value: 7 }, { name: "c", value: 8 }]
+    [{ name: "a", key: 6 }, { name: "b", key: 7 }, { name: "c", key: 8 }]
   ];
 let initializedData ={};
 data.flat(1).forEach((item) => {
