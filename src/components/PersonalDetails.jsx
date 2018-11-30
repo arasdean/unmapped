@@ -18,6 +18,7 @@ class PersonalDetails extends Component{
         return(
         <Form color='blue' >
             <h1 className="ui centered">Enter Personal Details</h1>
+            <h1> {this.props.values.interests[0]} </h1> 
             <Form.Field>
                 <label>Age</label>
                 <input placeholder='Age'

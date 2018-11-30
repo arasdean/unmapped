@@ -26,9 +26,7 @@ export default class Summary extends React.Component {
                             </div>
                             <input id="confirmMail" className="contact-input" type="email" placeholder="Confirm Email Address" /> 
                         </div>
-                        {/* <button onClick={() => {
-                            Router.push('/')
-                        }} className="submit-button">LET'S GO</button> */}
+                        <button className="submit-button">LET'S GO</button>
                     </div>
                     <div className="col summary">
                         <TravelSummary data={Object.assign({}, this.state)} />

@@ -1,10 +1,11 @@
 import React from 'react';
+import logo from '../static/Unmapped-1.png'
 import '../styles/main.scss'
 
 const NavBar = () => (
     <div className="nav_section">
         <div className="nav_row">
-            <div className="column logo"> <img src="/static/Unmapped-1.png" width="206" alt="" /> </div>
+            <div className="column logo"> <img src={logo} width="206" alt="" /> </div>
             <div className="column">  <a href="#" className="nav_link w-inline-block">
                 <h4>How it works</h4>
             </a>
