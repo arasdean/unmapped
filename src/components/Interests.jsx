@@ -22,7 +22,7 @@ let initializedData ={};
 data.flat(1).forEach((item) => {
     initializedData[item.name] = false; 
 })
-class UserDetails extends Component {
+class Interests extends Component {
     state = {
         counter: 0,
         data: initializedData, 
@@ -57,4 +57,4 @@ class UserDetails extends Component {
     }
 }
 
-export default UserDetails;
+export default Interests;

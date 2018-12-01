@@ -9,7 +9,7 @@ export default function Item({
 }) {
   return (
     <div
-      className="item"
+      className="square"
       onClick={() => handle(header)}
       style={clicked ? { background: color } : null}
     >

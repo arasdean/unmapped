@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import UserDetails from "./UserDetails";
+import Interests from "./Interests";
 import FormLayout from '../pages/FormLayout';
-import PersonalDetails from "./PersonalDetails";
-import Confirmation from "./Confirmation";
+import Guides from "./Guides";
+import Summary from '../pages/Summary'; 
+
 import Success from "./Success";
 
 class MainForm extends Component {
@@ -10,11 +11,9 @@ class MainForm extends Component {
     step: 1,
     guide: null, 
     interests: null,
-    lastName: "",
+    number: "",
     email: "",
-    age: "",
-    city: "",
-    country: ""
+    name: '', 
   };
 
   nextStep = () => {
@@ -35,8 +34,7 @@ class MainForm extends Component {
     this.setState({ [input]: event.target.value });
   };
 
-  testHandler = (f, v) => {
-    console.log('here');
+  genericHandler = (f, v) => {
     this.setState({ [f]: v });
   }
 
@@ -46,17 +44,17 @@ class MainForm extends Component {
 
   render() {
     const { step } = this.state;
-    const { firstName, lastName, email, age, city, country, interests } = this.state;
-    const values = { interests };
-    const { d } = this.props.location.state;
+    const { interests, guide } = this.state;
+    const { d, groupSize, price } = this.props.location.state;
+    const values = { interests, d, groupSize, guide};
     switch (step) {
       case 1:
         return (
           <FormLayout>
-            <UserDetails
+            <Interests
               nextStep={this.nextStep}
               prevStep={this.prevStep}
-              handleChange={this.testHandler}
+              handleChange={this.genericHandler}
               values={values}
               date={d}
             />
@@ -65,7 +63,7 @@ class MainForm extends Component {
       case 2:
         return (
           <FormLayout>
-            <PersonalDetails
+            <Guides
               nextStep={this.nextStep}
               prevStep={this.prevStep}
               handleChange={this.guideHandler}
@@ -75,10 +73,11 @@ class MainForm extends Component {
         );
       case 3:
         return (
-          <Confirmation
+          <Summary
             nextStep={this.nextStep}
             prevStep={this.prevStep}
-            values={values}
+            handleChange={this.handleChange}
+            values={{values: values, ...this.props.location.state}}
           />
         );
       case 4:

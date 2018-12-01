@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
 import Card from './Card';
+import '../styles/_guides.scss'; 
 // import { throws } from 'assert';
 const data = [{
     "name": "Beret Thrower",
@@ -28,7 +29,7 @@ const data = [{
     "location": "Impendle",
     "bio": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem."
 }];
-class PersonalDetails extends Component {
+class Guides extends Component {
     saveAndContinue = (e, name) => {
         e.preventDefault()
         this.props.handleChange(name);
@@ -43,15 +44,17 @@ class PersonalDetails extends Component {
     render() {
         const { values } = this.props
         return (
-            <div className="grid">
-                <h1 className="ui centered">Pick a guide</h1>
+            <div className="grid-container"> 
+            <h1 className="guides-header">Pick a guide</h1>
+            <div className="guides-grid">
 
                 {data.map(guide => <Card guide={guide} save={this.saveAndContinue} />)}
                 <Button onClick={this.back}>Back</Button>
                 {/* <Button onClick={}>Save And Continue </Button> */}
             </div>
+            </div> 
         )
     }
 }
 
-export default PersonalDetails;
+export default Guides;

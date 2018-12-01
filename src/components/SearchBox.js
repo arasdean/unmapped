@@ -6,6 +6,7 @@ import '../styles/_hero.scss';
 
 const Option = Select.Option;
 
+
 const menu = (
     <Menu>
         <Menu.Item>
@@ -19,13 +20,11 @@ const menu = (
         </Menu.Item>
     </Menu>
 );
-const testing123 = {b: 2};
 
 const SearchBox = ({ dateChange, groupChange, test1 }) => (
     <Card className='input-container'>
-        {console.log(test1)}
         <Row style={{ display: 'flex', justifyContent: 'center', width: '100%', }} >
-            <DatePicker onChange={(e) => dateChange(e)} style={{width: '100%'}}/>
+            <DatePicker onChange={(e) => dateChange(e)} style={{ width: '100%' }} />
         </Row>
         <Row style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '5px', marginBottom: '15px' }}>
             <Select
@@ -44,7 +43,7 @@ const SearchBox = ({ dateChange, groupChange, test1 }) => (
         <Row style={{ display: 'flex', justifyContent: 'center' }}>
             <Link to={{
                 pathname: "/form",
-                state: {d: test1.d, groupSize: test1.groupSize},
+                state: { d: test1.d, groupSize: test1.groupSize, price: test1.price },
             }}>
                 <Button type='primary'> Book Tour ⚡ </Button>
             </Link>
