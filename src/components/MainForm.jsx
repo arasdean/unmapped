@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import UserDetails from "./UserDetails";
+import FormLayout from '../pages/FormLayout';
 import PersonalDetails from "./PersonalDetails";
 import Confirmation from "./Confirmation";
 import Success from "./Success";
@@ -7,7 +8,8 @@ import Success from "./Success";
 class MainForm extends Component {
   state = {
     step: 1,
-    firstName: "",
+    guide: null, 
+    interests: null,
     lastName: "",
     email: "",
     age: "",
@@ -33,29 +35,43 @@ class MainForm extends Component {
     this.setState({ [input]: event.target.value });
   };
 
+  testHandler = (f, v) => {
+    console.log('here');
+    this.setState({ [f]: v });
+  }
+
+  guideHandler = (guide) => {
+    this.setState({guide: guide})
+  }
+
   render() {
     const { step } = this.state;
-    const { firstName, lastName, email, age, city, country } = this.state;
-    const values = { firstName, lastName, email, age, city, country };
-
+    const { firstName, lastName, email, age, city, country, interests } = this.state;
+    const values = { interests };
+    const { d } = this.props.location.state;
     switch (step) {
       case 1:
         return (
-          <UserDetails
-            nextStep={this.nextStep}
-            prevStep={this.prevStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
+          <FormLayout>
+            <UserDetails
+              nextStep={this.nextStep}
+              prevStep={this.prevStep}
+              handleChange={this.testHandler}
+              values={values}
+              date={d}
+            />
+          </FormLayout>
         );
       case 2:
         return (
-          <PersonalDetails
-            nextStep={this.nextStep}
-            prevStep={this.prevStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
+          <FormLayout>
+            <PersonalDetails
+              nextStep={this.nextStep}
+              prevStep={this.prevStep}
+              handleChange={this.guideHandler}
+              values={values}
+            />
+          </FormLayout>
         );
       case 3:
         return (
