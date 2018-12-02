@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import MainForm from "./components/MainForm";
+import LandingPage from './pages/LandingPage';
 // import MainForm from "./components/MainForm.jsx";
 // import Roster from "./Roster";
 // import Schedule from "./Schedule";

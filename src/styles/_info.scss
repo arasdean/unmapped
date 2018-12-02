@@ -1,9 +1,9 @@
 .info-section {
-    display: block;
     align-items: center;
     justify-content: center;
     background-color: white;
 }
+
 .heading-2 {
     text-align: center; 
 }
@@ -18,11 +18,6 @@
     margin-bottom: 20px;
 }
 
-.item {
-    display: inline-block;
-    width: 300px;
-    margin: 20px;
-}
 
 .item__image {
     height: 340px;
