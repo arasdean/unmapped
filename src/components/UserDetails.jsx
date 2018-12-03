@@ -50,7 +50,7 @@ class UserDetails extends Component {
         return (
             <React.Fragment> 
                <Grid  data={data} handler={this.handler} clickedState={this.state.data}/> 
-               <Button onClick={this.saveAndContinue}> Next </Button> 
+               <div className="atn-button"><Button onClick={this.saveAndContinue}> Next </Button></div>
             </React.Fragment>
            
         )
