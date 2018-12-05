@@ -19,6 +19,16 @@
 }
 
 
+.item-home {
+    width: 300px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 10px 5px;
+  }
+
 .item__image {
     height: 340px;
     margin-bottom: 30px;
@@ -53,3 +63,4 @@
 .item__text {
     color: gray;
 }
+
