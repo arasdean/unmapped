@@ -10,10 +10,10 @@ const InfoSection = () => (
                 <div className="item">
                     <div className="item-content">
                         <div className="item__image"></div>
-                        <h3>Unforgettable Memories.</h3>
+                        <h3>Great Journeys.</h3>
                     </div>
                     <div className="item__text">
-                    If you are trying to find things to do in San Francisco or just want a taste of what San Francisco has to offer who better to show you than a local. In our line of work we don’t only make plans, we help you build experiences and memories. Connect with one our locals!
+                        At the core of our company, we believe in creating close ties with each customer to best understand their travel needs and preferences. Allow us to fulfill all your travel needs and wants.
                     </div>
                 </div>
                 <div className="item">
@@ -28,10 +28,10 @@ const InfoSection = () => (
                 <div className="item">
                     <div className="item-content">
                         <div className="item3__image"></div>
-                        <h3>Great Journeys. </h3>
+                        <h3>Unforgettable Memories. </h3>
                     </div>
                     <div className="item__text">
-                    At the core of our company, we believe in creating close ties with each customer to best understand their travel needs and preferences. Allow us to fulfill all your travel needs and wants.
+                        If you are trying to find things to do in San Francisco or just want a taste of what San Francisco has to offer who better to show you than a local. In our line of work we don’t only make plans, we help you build experiences and memories. Connect with one our locals!
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 .hero_section {
     height: 100vh;
-    background-image: url('../static/pexels-photo-417054.jpeg');
+    background-image: url('../images/golden-gate.jpg');
     background-position: 0px 0px;
     background-size: cover;
   }
@@ -193,6 +193,10 @@
 
   .rc-time-picker-input {
     margin: 5px 0;
+  }
+
+  .timepickers {
+    width: 100%
   }
 
   .submit-button {
