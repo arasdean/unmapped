@@ -4,7 +4,9 @@ import '../styles/pages.scss';
 
 const FormLayout = (props) => (
     <Layout type='form'>
-        <div style={{ height: '50px', background: '#6dec67' }} />
+        <div className='breadcrumb'> 
+            <b> “Traveling—it leaves you speechless, then turns you into a storyteller.” - Ibn Batuta </b>
+        </div> 
         <div className='form-container'>
             {props.children}
         </div>

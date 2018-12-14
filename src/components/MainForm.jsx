@@ -1,20 +1,30 @@
 import React, { Component } from "react";
+import { Redirect } from 'react-router'; 
+import axios from 'axios'; 
 import Interests from "./Interests";
 import FormLayout from '../pages/FormLayout';
 import Guides from "./Guides";
 import Summary from '../pages/Summary'; 
-
 import Success from "./Success";
+ 
+
 
 class MainForm extends Component {
-  state = {
-    step: 1,
-    guide: null, 
-    interests: null,
-    number: "",
-    email: "",
-    name: '', 
-  };
+  constructor(props) {
+    super(props)
+    this.state = {
+      step: 1,
+      guide: null, 
+      interests: null,
+      number: "",
+      email: "",
+      name: '', 
+      referral: null, 
+      extra: '', 
+      contactPref: 'Email'
+    };
+  
+  }
 
   nextStep = () => {
     const { step } = this.state;
@@ -30,6 +40,25 @@ class MainForm extends Component {
     });
   };
 
+  submit = (values) => {
+    // this.nextStep();
+    const {d, groupSize, price} = values;  
+    const { name, email, guide, interests, contactPref, referral, extra} = this.state; 
+    const finalData = {price, groupSize, interests, d, guide, referral, contactPref, extra} 
+    console.log(finalData)
+    // axios.post('https://few3sktvhi.execute-api.us-east-1.amazonaws.com/v1/', {
+    //   name: name, 
+    //   email: email,
+    //   message: finalData, 
+    // })
+    // .then(function (response) {
+    //   console.log(response.status); 
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // });
+  }
+
   handleChange = input => event => {
     this.setState({ [input]: event.target.value });
   };
@@ -43,10 +72,14 @@ class MainForm extends Component {
   }
 
   render() {
+    if(typeof this.props.location.state === 'undefined') {
+      return <Redirect to='/' />
+    }
     const { step } = this.state;
-    const { interests, guide } = this.state;
+    const { interests, guide, contactPref } = this.state;
     const { d, groupSize, price } = this.props.location.state;
-    const values = { interests, d, groupSize, guide};
+    const values = { interests, guide, contactPref};
+
     switch (step) {
       case 1:
         return (
@@ -77,6 +110,7 @@ class MainForm extends Component {
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             handleChange={this.handleChange}
+            submit={this.submit}
             values={{values: values, ...this.props.location.state}}
           />
         );

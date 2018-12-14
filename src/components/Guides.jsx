@@ -1,34 +1,69 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
 import Card from './Card';
-import '../styles/_guides.scss'; 
+import '../styles/_guides.scss';
 // import { throws } from 'assert';
-const data = [{
-    "name": "Beret Thrower",
-    "url": "https://images.unsplash.com/photo-1542841366-ddfe55c504a3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=315b994a3dd008a283d576cb34cc4f79&auto=format&fit=crop&w=668&q=80",
-    "location": "Nikol’sk",
-    "bio": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-}, {
-    "name": "Melisandra Greatbatch",
-    "url": "https://images.unsplash.com/photo-1542838686-b08706f6f2d1?ixlib=rb-0.3.5&s=34973521d142d68c7c10b8c4a5c0ec4e&auto=format&fit=crop&w=668&q=80",
-    "location": "Ganding",
-    "bio": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat."
-}, {
-    "name": "Brodie Bretelle",
-    "url": "https://images.unsplash.com/photo-1504593811423-6dd665756598?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9305a37dfc018487bca76a6f59944ad4&auto=format&fit=crop&w=1650&q=80",
-    "location": "Tambura",
-    "bio": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem."
-}, {
-    "name": "Prince Bednell",
-    "url": "https://images.unsplash.com/photo-1523419409543-a5e549c1faa8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fa485f770bd733e2f8ab5a4a2ca50a39&auto=format&fit=crop&w=686&q=80",
-    "location": "Huangmei",
-    "bio": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
-}, {
-    "name": "Gareth Fewell",
-    "url": "https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=439ae9d2f9629f265b954750ce130f44&auto=format&fit=crop&w=668&q=80",
-    "location": "Impendle",
-    "bio": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem."
-}];
+
+const data = [
+    {
+      "name": "Paul Jennings",
+      "url": "https://images.unsplash.com/photo-1542838686-b08706f6f2d1?ixlib=rb-0.3.5&s=34973521d142d68c7c10b8c4a5c0ec4e&auto=format&fit=crop&w=668&q=80",
+      "languages": "English, Rudimentary French",
+      "gender": "Male",
+      "bio": "Paul, in addition to being a highly sought-after tour guide, is a San Francisco native, a professional actor, and world traveler, who has spent time in many countries around the world.  Having worked for years in the local tech industry, for companies like Lucasfilm and Ubisoft, Paul shifted his career toreally leverage his strengths, and began using his perfomance and research skills to create comprehensive tours of the San Francisco Bay Area, featuring a mix of attractions, ranging from the \"Must-see\" (Golden Gate Bridge, Chinatown, the Haight-Ashbury District, etc) to the obscure well-kept secret locales: best local dives, best used bookstore,  best dim sum in SF (hint: it's *not* in Chinatown).  When not in SF, Paul can be found working in Shakepeare theatres around the world, having performed in venues like Shakesopeare’s Globe in London, The Pop-up Globe in Auckland New Zealand, and, recently, the streets of Seoul, Korea!"
+    },
+    {
+      "name": "Obaida Albaroudi",
+      "languages": "Arabic, English, Basic Spanish",
+      "url": "https://images.unsplash.com/photo-1542838686-b08706f6f2d1?ixlib=rb-0.3.5&s=34973521d142d68c7c10b8c4a5c0ec4e&auto=format&fit=crop&w=668&q=80",
+      "gender": "Male",
+      "bio": "Obaida is an avid basketball fan as well as a big time foodie. He not only has a list of the top restaurants in SF/Bay Area but also across the world. He is in touch with the corporate world in SF and can help plan visits across the different companies in the area while also talking to the culture of SF. If you are looking to better understand the food scene and the overall culture of SF and the bay area he is the go to person."
+    },
+    {
+      "name": "Roger Colton",
+      "languages": "English",
+      "url": "https://images.unsplash.com/photo-1542838686-b08706f6f2d1?ixlib=rb-0.3.5&s=34973521d142d68c7c10b8c4a5c0ec4e&auto=format&fit=crop&w=668&q=80",
+      "gender": "Male",
+      "bio": "A lifelong Bay Area resident, with a passion for history of the area. Extensive background in transportation of the region. A fan of the popular culture as well."
+    },
+    {
+      "name": "Danit Telem",
+      "languages": "English\nHebrew",
+      "url": "https://images.unsplash.com/photo-1542838686-b08706f6f2d1?ixlib=rb-0.3.5&s=34973521d142d68c7c10b8c4a5c0ec4e&auto=format&fit=crop&w=668&q=80",
+      "gender": "Female",
+      "url": "https://images.unsplash.com/photo-1542838686-b08706f6f2d1?ixlib=rb-0.3.5&s=34973521d142d68c7c10b8c4a5c0ec4e&auto=format&fit=crop&w=668&q=80",
+      "bio": "Hello! My name is Danit Telem and I've lived in San Francisco for 6 years and find that I love it more and more every day. I work in the tech industry and in my free time enjoy exploring the city and all it has to offer. I also LOVE sweets and enjoy tasting a bit of everything, for research purposes of course!"
+    },
+    {
+      "name": "Evonnie Lovely Contreras",
+      "languages": "French, German and English",
+      "url": "https://images.unsplash.com/photo-1542838686-b08706f6f2d1?ixlib=rb-0.3.5&s=34973521d142d68c7c10b8c4a5c0ec4e&auto=format&fit=crop&w=668&q=80",
+      "gender": "Female",
+      "bio": "A funny, outgoing and mature SF native who can show you every nook and cranny of SF. Big foodie and artsy hipster."
+    },
+    {
+      "name": "Jesse Parker",
+      "languages": "English",
+      "url": "https://images.unsplash.com/photo-1542838686-b08706f6f2d1?ixlib=rb-0.3.5&s=34973521d142d68c7c10b8c4a5c0ec4e&auto=format&fit=crop&w=668&q=80",
+      "gender": "Male",
+      "bio": "Jesse Parker is a Gay 26-year-old Bay Area native. He studies art history and visual culture in Berkeley and was an art framer for a time. As a result, he has become a purveyor of the art scenes in San Francisco and greater bay area. Although he lives in Oakland he loves to get lost in San Francisco whenever the opportunity arises finding new restaurants, cafés, parks to hike and places to hang out. When the mood strikes he has been known to take in the vibrant and varied night life that San Francisco has to offer. When time permits he loves to cook and host dinner parties for his friends."
+    },
+    {
+      "name": "Hossain",
+      "languages": "English, Arabic",
+      "url": "https://images.unsplash.com/photo-1542838686-b08706f6f2d1?ixlib=rb-0.3.5&s=34973521d142d68c7c10b8c4a5c0ec4e&auto=format&fit=crop&w=668&q=80",
+      "gender": "Male",
+      "bio": "I am a 26 year-old born and raised Bay Area native that loves sports (Go Dubs!), music and learning new things. The Bay is a rich historical and cultural that is at a unique inflection point - the tradition of the area is merging with the the most forward-looking industry in the world: tech. I think that's fascinating and is one of the primary reasons I love living here!"
+    },
+    {
+      "name": "Raj Khanna",
+      "languages": "English, Hindi",
+      "url": "https://images.unsplash.com/photo-1542838686-b08706f6f2d1?ixlib=rb-0.3.5&s=34973521d142d68c7c10b8c4a5c0ec4e&auto=format&fit=crop&w=668&q=80",
+      "gender": "Male",
+      "bio": "Raj is a lover of the natural life, and the bay area is an indulgent place. He is an avid hiker and actively seeks out unique places and stunning natural vistas in SF, East Bay (Berkeley, Oakland) and the North Bay counties. He spends a lot of his recreational hours with friends visiting the many local breweries, wineries and artisinal farms (produce, cheeses etc.) that call this region home. When not eating, drinking and walking/hiking his way around town, Raj geeks out on the contemporary history and culture of San Francisco - from the 'Summer of Love' to the Beat Poets to the Black Panthers to Alice Water's local food movement."
+    }
+  ]
+
 class Guides extends Component {
     saveAndContinue = (e, name) => {
         e.preventDefault()
@@ -44,15 +79,16 @@ class Guides extends Component {
     render() {
         const { values } = this.props
         return (
-            <div className="grid-container"> 
-            <h1 className="guides-header">Pick a guide</h1>
-            <div className="guides-grid">
-
-                {data.map(guide => <Card guide={guide} save={this.saveAndContinue} />)}
-                <Button onClick={this.back}>Back</Button>
-                {/* <Button onClick={}>Save And Continue </Button> */}
+            <div> 
+                <div className='guides-grid'>
+                <div classname='guides-row'> 
+                    <h1 classname="guides-header">Pick a guide</h1>
+                     <Button onClick={this.back}>Back</Button>
+                </div>
+                 {data.map(guide => <Card guide={guide} save={this.saveAndContinue} />)}
+                </div>
+                
             </div>
-            </div> 
         )
     }
 }

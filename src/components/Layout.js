@@ -9,7 +9,7 @@ const Layout = (props) => (
     <Container> 
         {props.type && props.type === 'form' ? <NavBarForms /> : <NavBar />}
         {props.children}
-        <CopyrightFoot />
+        {/* <CopyrightFoot /> */}
     </Container> 
 )
 

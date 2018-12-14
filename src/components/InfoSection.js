@@ -10,28 +10,28 @@ const InfoSection = () => (
                 <div className="item">
                     <div className="item-content">
                         <div className="item__image"></div>
-                        <h3>Meet Locals</h3>
+                        <h3>Unforgettable Memories.</h3>
                     </div>
                     <div className="item__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+                    If you are trying to find things to do in San Francisco or just want a taste of what San Francisco has to offer who better to show you than a local. In our line of work we don’t only make plans, we help you build experiences and memories. Connect with one our locals!
                     </div>
                 </div>
                 <div className="item">
                     <div className="item-content">
                         <div className="item2__image"></div>
-                        <h3>Experience Nature</h3>
+                        <h3>Fascinating Places.</h3>
                     </div>
                     <div className="item__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+                        UnMapped is providing you with locals who know the all ins and outs of San Francisco. They will guide you on a tour where you will not only engage with tourist hotspots but also the hidden gems that only a local would know.
                     </div>
                 </div>
                 <div className="item">
                     <div className="item-content">
                         <div className="item3__image"></div>
-                        <h3>See Sights</h3>
+                        <h3>Great Journeys. </h3>
                     </div>
                     <div className="item__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+                    At the core of our company, we believe in creating close ties with each customer to best understand their travel needs and preferences. Allow us to fulfill all your travel needs and wants.
                     </div>
                 </div>
             </div>

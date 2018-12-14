@@ -3,30 +3,35 @@ import { Form, Button } from 'antd';
 import Grid from './Grid';
 import 'antd/dist/antd.css';
 import '../styles/pages.scss';
+
 const FormItem = Form.Item;
 
 const data = [
     [
-      { name: "chicken", key: 0 },
-      { name: "beef", key: 1 },
-      { name: "tuna", key: 2 }
+        { name: "Entertainment", key: 0, },
+        { name: "Food and Drinks", key: 1, },
+        { name: "Adventure", key: 2 }
     ],
     [
-      { name: "test", key: 3 },
-      { name: "tset", key: 4 },
-      { name: "sett", key: 5 }
+        { name: "History & Art", key: 3 },
+        { name: "Culture", key: 4, },
+        { name: 'Events', key: 5 }
     ],
-    [{ name: "a", key: 6 }, { name: "b", key: 7 }, { name: "c", key: 8 }]
-  ];
-let initializedData ={};
+    [
+        { name: "Sightseeing", key: 6 },
+        { name: "Music", key: 7 },
+        { name: "Sports", key: 8 }
+    ],
+];
+let initializedData = {};
 data.flat(1).forEach((item) => {
-    initializedData[item.name] = false; 
+    initializedData[item.name] = false;
 })
 class Interests extends Component {
     state = {
         counter: 0,
-        data: initializedData, 
-      };
+        data: initializedData,
+    };
     handler = n => {
         let newState = { ...this.state.data };
         newState[n] = !this.state.data[n];
@@ -39,20 +44,18 @@ class Interests extends Component {
     };
     saveAndContinue = (e) => {
         e.preventDefault()
-        const {data} = this.state;
+        const { data } = this.state;
         const interests = Object.keys(data).filter((i) => data[i]);
-        this.props.handleChange('interests', interests); 
-        this.props.nextStep(); 
+        this.props.handleChange('interests', interests);
+        this.props.nextStep();
     }
 
     render() {
-        const { values } = this.props;
         return (
-            <React.Fragment> 
-               <Grid  data={data} handler={this.handler} clickedState={this.state.data}/> 
-               <Button onClick={this.saveAndContinue}> Next </Button> 
+            <React.Fragment>    
+                <h1> Please choose up to three interests: </h1>
+                <Grid data={data} save={this.saveAndContinue} handler={this.handler} clickedState={this.state.data} />
             </React.Fragment>
-           
         )
     }
 }

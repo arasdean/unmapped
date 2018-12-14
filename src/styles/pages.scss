@@ -3,9 +3,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .form {
     height: 50%;
     width: 80%; 
 }
+
+.breadcrumb {
+    height: 50px; 
+    background: #6dec67;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; 
+} 

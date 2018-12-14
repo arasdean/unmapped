@@ -1,6 +1,6 @@
 .hero_section {
     height: 100vh;
-    background-image: url('../static/architecture-buildings-business-325185.jpg');
+    background-image: url('../static/pexels-photo-417054.jpeg');
     background-position: 0px 0px;
     background-size: cover;
   }
@@ -8,7 +8,8 @@
 
   .nav_row {
     display: flex; 
-    justify-content: space-around
+    justify-content: space-around;
+    background: white; 
    }
 
   .column {

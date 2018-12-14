@@ -11,7 +11,7 @@ export default function Item({
     <div
       className="square"
       onClick={() => handle(header)}
-      style={clicked ? { background: color } : null}
+      style={clicked ? { opacity: '.3' } : null}
     >
       {header}
     </div>

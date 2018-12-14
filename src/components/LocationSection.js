@@ -2,18 +2,12 @@ import React from 'react';
 
 const LocationSection = () => (
     <div className="location-box">
-        <h1 className="location-header">Explore New Places</h1>
-        <div className="location-width-container">
-            <div className="_2-col first-location">
+        <div className="location-width-container first-location">
+            {/* <div className="_2-col first-location"> */}
                 <div className="location-description">
-                    <h1 className="location-subheader">San Francisco, CA</h1>
+                    <h1 className="location-subheader"> Explore San Francisco, CA</h1>
                 </div>
-            </div>
-            <div className="_2-col second-location">
-                <div className="location-description">
-                    <h1 className="location-subheader">New York, NY</h1>
-                </div>
-            </div>
+            {/* </div> */}
         </div>
     </div>
 )

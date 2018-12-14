@@ -1,4 +1,7 @@
 import React from "react";
+import { Button } from 'antd';
+import 'antd/dist/antd.css';
+import '../styles/pages.scss';
 import Item from "./Item";
 
 
@@ -19,6 +22,9 @@ export default class Grid extends React.Component {
            )}
           </div>
         ))}
+        <div className='row' style={{display: 'flex', justifyContent: 'center'}}> 
+           <Button onClick={this.props.save}> Next </Button>
+         </div>
       </div>
     );
   }

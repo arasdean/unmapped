@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Select, Icon, DatePicker, Button, Card, Row, Col } from 'antd';
+import { Menu, Select, TimePicker, DatePicker, Button, Card, Row, Col } from 'antd';
 import { Link } from "react-router-dom";
 import 'antd/dist/antd.css';
 import '../styles/_hero.scss';
@@ -21,12 +21,28 @@ const menu = (
     </Menu>
 );
 
+const prices = {
+    '1 Person → $35/hr': 35,
+    "2 People → $40/hr": 40,
+    "3 People → $45/hr": 45,
+    "4 People → $50/hr": 50,
+    "5 People → $55/hr": 55,
+    "6 People → $60/hr": 60,
+    "7 People → $65/hr": 65,
+    "8 People → $70/hr": 70,
+    "9 People → $75/hr": 75,
+} 
+
+
 const SearchBox = ({ dateChange, groupChange, test1 }) => (
     <Card className='input-container'>
         <Row style={{ display: 'flex', justifyContent: 'center', width: '100%', }} >
             <DatePicker onChange={(e) => dateChange(e)} style={{ width: '100%' }} />
         </Row>
-        <Row style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '5px', marginBottom: '15px' }}>
+        <Row style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '5px' }}> 
+         <TimePicker use12Hours format="HH:mm a" minuteStep={15} style={{ width: '100%' }} />
+        </Row>
+        <Row style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '5px', marginBottom: '20px' }}>
             <Select
                 showSearch
                 style={{ width: 200 }}
@@ -35,11 +51,14 @@ const SearchBox = ({ dateChange, groupChange, test1 }) => (
                 onChange={groupChange}
                 filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
             >
-                <Option value="2-4">2-4</Option>
-                <Option value="5-6">5-6</Option>
-                <Option value="7-8">7-8</Option>
+                {Object.keys(prices).map(price =>  
+                    <Option value={price}>{price}</Option>
+                )}
+                
             </Select>
         </Row>
+
+
         <Row style={{ display: 'flex', justifyContent: 'center' }}>
             <Link to={{
                 pathname: "/form",
