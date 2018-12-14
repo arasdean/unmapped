@@ -54,7 +54,16 @@ const SearchBox = ({ dateChange, groupChange, test1 }) => (
          <TimePicker
          showSecond={false}
          showMinute={false}
-         defaultValue={now}
+         placeholder='Start Time'
+         className="xxx"
+         format={format}
+         use12Hours
+         inputReadOnly
+         style={{ width: '100%' }} />
+         <TimePicker
+         showSecond={false}
+         showMinute={false}
+         placeholder="End Time"
          className="xxx"
          format={format}
          use12Hours
