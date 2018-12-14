@@ -3,7 +3,7 @@ import React from 'react';
 const InfoSection = () => (
     <div className="info-section">
         <h1 className="info-section__main-header">
-            Get an Experience Catered To You
+            Get an Experience Catered For You
         </h1>
         <div className="info-block">
             <div className="info-content">
