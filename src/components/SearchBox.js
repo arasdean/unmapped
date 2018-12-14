@@ -1,8 +1,13 @@
 import React from 'react';
-import { Menu, Select, TimePicker, DatePicker, Button, Card, Row, Col } from 'antd';
+import { Menu, Select, DatePicker, Button, Card, Row, Col } from 'antd';
+import TimePicker from 'rc-time-picker';
 import { Link } from "react-router-dom";
 import 'antd/dist/antd.css';
 import '../styles/_hero.scss';
+import moment from 'moment';
+
+import 'rc-time-picker/assets/index.css';
+
 
 const Option = Select.Option;
 
@@ -34,13 +39,27 @@ const prices = {
 } 
 
 
+
+
+const format = 'h:mm a';
+
+const now = moment().hour(0).minute(0);
+
 const SearchBox = ({ dateChange, groupChange, test1 }) => (
     <Card className='input-container'>
         <Row style={{ display: 'flex', justifyContent: 'center', width: '100%', }} >
             <DatePicker onChange={(e) => dateChange(e)} style={{ width: '100%' }} />
         </Row>
         <Row style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '5px' }}> 
-         <TimePicker use12Hours format="HH:mm a" minuteStep={15} style={{ width: '100%' }} />
+         <TimePicker
+         showSecond={false}
+         showMinute={false}
+         defaultValue={now}
+         className="xxx"
+         format={format}
+         use12Hours
+         inputReadOnly
+         style={{ width: '100%' }} />
         </Row>
         <Row style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '5px', marginBottom: '20px' }}>
             <Select
