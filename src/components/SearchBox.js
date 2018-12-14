@@ -41,7 +41,7 @@ const prices = {
 
 
 
-const format = 'h:mm a';
+const format = 'h a';
 
 const now = moment().hour(0).minute(0);
 
