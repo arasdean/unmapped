@@ -1,0 +1,23 @@
+.how-row {
+    display: flex; 
+    justify-content: space-evenly; 
+    flex-direction: row; 
+    padding: 50px 50px; 
+};
+
+.how-col {
+    width: 33%; 
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 40px;
+}
+h1 {
+    color: #40a9ff;
+} 
+h3 {
+    text-align: center;
+    color: #73d13d; 
+}
