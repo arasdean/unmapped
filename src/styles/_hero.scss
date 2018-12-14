@@ -106,7 +106,7 @@
     // background: #f5f5f5;
   }
   .input-container {
-    height: 150px; 
+    height: 200px; 
     display: flex; 
     flex-direction: column; 
     align-content: space-between;
@@ -188,4 +188,16 @@
   }
   input.w-button {
     -webkit-appearance: button;
+  }
+
+
+  .rc-time-picker-input {
+    margin: 5px 0;
+  }
+
+  .submit-button {
+    background: none;
+    position: relative;
+    top: -12px;
+    left: 62px;
   }

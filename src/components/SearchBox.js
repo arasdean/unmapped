@@ -51,24 +51,31 @@ const SearchBox = ({ dateChange, groupChange, test1 }) => (
             <DatePicker onChange={(e) => dateChange(e)} style={{ width: '100%' }} />
         </Row>
         <Row style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '5px' }}> 
-         <TimePicker
-         showSecond={false}
-         showMinute={false}
-         placeholder='Start Time'
-         className="xxx"
-         format={format}
-         use12Hours
-         inputReadOnly
-         style={{ width: '100%' }} />
-         <TimePicker
-         showSecond={false}
-         showMinute={false}
-         placeholder="End Time"
-         className="xxx"
-         format={format}
-         use12Hours
-         inputReadOnly
-         style={{ width: '100%' }} />
+        <div className="timepickers">
+            <div className="timepicker">
+                <TimePicker
+                showSecond={false}
+                showMinute={false}
+                placeholder='Start Time'
+                className="xxx"
+                format={format}
+                use12Hours
+                inputReadOnly
+                style={{ width: '100%' }} 
+                />
+            </div>
+            <div className="timepicker">
+                <TimePicker
+                showSecond={false}
+                showMinute={false}
+                placeholder="End Time"
+                className="xxx"
+                format={format}
+                use12Hours
+                inputReadOnly
+                style={{ width: '100%' }} /> 
+            </div>
+        </div>
         </Row>
         <Row style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '5px', marginBottom: '20px' }}>
             <Select
@@ -92,7 +99,9 @@ const SearchBox = ({ dateChange, groupChange, test1 }) => (
                 pathname: "/form",
                 state: { d: test1.d, groupSize: test1.groupSize, price: test1.price },
             }}>
-                <Button type='primary'> Book Tour ⚡ </Button>
+                <div className="submit-button">
+                    <Button type='primary'> Book Tour ⚡ </Button>
+                </div>
             </Link>
         </Row>
     </Card>
