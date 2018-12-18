@@ -31,13 +31,14 @@ export default class Summary extends React.Component {
                             <div className='email-form'>
                                 <input id="name" onChange={this.props.handleChange('name')} className="contact-input" type="name" placeholder="Referral Code (optional)" />
                             </div>
+                             <button style={{ background: '#2cb066', marginTop: '30px' }} className="submit-button" onClick={() => submit(values)}>LET'S GO</button>
                         </div>
+
                     </div>
                     <div className="col summary">
-                        <TravelSummary data={this.props.values} />
+                        <TravelSummary data={this.props.values}/>
                         <br /> 
-                        <TextArea placeholder="Is there anything else you want us to know?"/> 
-                    <button style={{ marginTop: '30px' }} className="submit-button" onClick={() => submit(values)}>LET'S GO</button>
+                        <TextArea onChange={this.props.handleChange('extra')}  placeholder="Is there anything else you want us to know?"/> 
                     </div>
                 </div>
             </Layout>

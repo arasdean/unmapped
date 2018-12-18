@@ -8,6 +8,7 @@ const NavBar = () => (
             <div className="column logo">  <a href='/'> <img src={logo} width="206" alt="" /> </a></div>
 
             <div className="column">
+                <a href='#how'> <h4> How It Works </h4></a> 
                 <a href="mailto: hello@unmapped.io" className="nav_link w-inline-block">
                     <h4>Contact</h4>
                 </a>

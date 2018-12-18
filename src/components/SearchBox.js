@@ -45,7 +45,7 @@ const format = 'h a';
 
 const now = moment().hour(0).minute(0);
 
-const SearchBox = ({ dateChange, groupChange, test1 }) => (
+const SearchBox = ({ dateChange, groupChange, heroState, endTimeChange, startTimeChange }) => (
     <Card className='input-container'>
         <Row style={{ display: 'flex', justifyContent: 'center', width: '100%', }} >
             <DatePicker onChange={(e) => dateChange(e)} style={{ width: '100%' }} />
@@ -56,6 +56,7 @@ const SearchBox = ({ dateChange, groupChange, test1 }) => (
                 <TimePicker
                 showSecond={false}
                 showMinute={false}
+                onChange={startTimeChange}
                 placeholder='Start Time'
                 className="xxx"
                 format={format}
@@ -70,6 +71,7 @@ const SearchBox = ({ dateChange, groupChange, test1 }) => (
                 showMinute={false}
                 placeholder="End Time"
                 className="xxx"
+                onChange={endTimeChange}
                 format={format}
                 use12Hours
                 inputReadOnly
@@ -97,7 +99,7 @@ const SearchBox = ({ dateChange, groupChange, test1 }) => (
         <Row style={{ display: 'flex', justifyContent: 'center' }}>
             <Link to={{
                 pathname: "/form",
-                state: { d: test1.d, groupSize: test1.groupSize, price: test1.price },
+                state: { start: heroState.startTime, end: heroState.endTime, d: heroState.d, groupSize: heroState.groupSize, price: heroState.price, heroState },
             }}>
                 <div className="submit-button">
                     <Button type='primary'> Book Tour ⚡ </Button>

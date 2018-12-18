@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/_how.scss';
 
 const HowSection = () => (
-    <div className="info-section">
+    <div className="info-section" id="how">
         <h1 className="info-section__main-header">
             Get an Experience Catered For You
         </h1>

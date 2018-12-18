@@ -21,7 +21,7 @@ class MainForm extends Component {
       name: '', 
       referral: null, 
       extra: '', 
-      contactPref: 'Email'
+      contactPref: 'Email',
     };
   
   }
@@ -42,21 +42,20 @@ class MainForm extends Component {
 
   submit = (values) => {
     // this.nextStep();
-    const {d, groupSize, price} = values;  
+    const {d, groupSize, price, start, end} = values;  
     const { name, email, guide, interests, contactPref, referral, extra} = this.state; 
-    const finalData = {price, groupSize, interests, d, guide, referral, contactPref, extra} 
-    console.log(finalData)
-    // axios.post('https://few3sktvhi.execute-api.us-east-1.amazonaws.com/v1/', {
-    //   name: name, 
-    //   email: email,
-    //   message: finalData, 
-    // })
-    // .then(function (response) {
-    //   console.log(response.status); 
-    // })
-    // .catch(function (error) {
-    //   console.log(error);
-    // });
+    const finalData = {price, start, end, groupSize, interests, d, guide, referral, contactPref, extra} 
+    axios.post('https://few3sktvhi.execute-api.us-east-1.amazonaws.com/v1/', {
+      name: name, 
+      email: email,
+      message: finalData, 
+    })
+    .then(function (response) {
+      console.log(response.status); 
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
   handleChange = input => event => {
@@ -77,7 +76,7 @@ class MainForm extends Component {
     }
     const { step } = this.state;
     const { interests, guide, contactPref } = this.state;
-    const { d, groupSize, price } = this.props.location.state;
+    const { d } = this.props.location.state;
     const values = { interests, guide, contactPref};
 
     switch (step) {
