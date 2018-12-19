@@ -128,6 +128,9 @@ box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
     background-color: #fff;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .05);
     text-align: center;
+    height: 360px;
+    width: 500px;
+    margin: 10px 15px;
   }
   
   .team3-profiles-row {
@@ -161,4 +164,13 @@ box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
       display: flex; 
       justify-content: center; 
       
+  }
+
+  .team3-content-container {
+      display: flex;
+  }
+
+  .team3-avatar-container {
+    align-content: center;
+    margin-right: 10px;
   }
