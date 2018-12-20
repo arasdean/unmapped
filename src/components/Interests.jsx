@@ -52,10 +52,10 @@ class Interests extends Component {
 
     render() {
         return (
-            <React.Fragment>    
+            <div className='interest-container'>    
                 <h1> Please choose up to three interests: </h1>
                 <Grid data={data} save={this.saveAndContinue} handler={this.handler} clickedState={this.state.data} />
-            </React.Fragment>
+            </div>
         )
     }
 }
