@@ -58,3 +58,10 @@
 .item__text {
     color: gray;
 }
+
+@media (max-width: 575px) {
+    .info-content {
+        display: flex;
+        flex-direction: column;
+    }
+}
