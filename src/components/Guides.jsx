@@ -64,16 +64,15 @@ class Guides extends Component {
     render() {
         const { values } = this.props
         return (
-            <div>
+            <React.Fragment>
                 <div className="guides-row"> 
                     <h1 classname="guides-header">Pick a guide</h1>
-                    <Button onClick={this.back}>Back</Button>
                 </div>
-                <div className='guides-grid'>
-                  {data.map(guide => <Card guide={guide} save={this.saveAndContinue} />)}
-                </div>
-                
-            </div>
+                    <div className='guides-grid'>
+                      {data.map(guide => <Card guide={guide} save={this.saveAndContinue} />)}
+                    </div>
+                  <Button onClick={this.back}>Back</Button>
+            </React.Fragment>
         )
     }
 }
