@@ -26,21 +26,21 @@
     text-align: center;
 }
 
+.grid {
+    display: flex;
+    flex-direction: row;
+    flext-wrap: wrap;
+}
+
+.row2 {
+    width: 33%;
+    min-width: 350px;
+    display: inline-flex;
+    flex-direction: row;
+}
+
 .breadcrumb {
 @media (max-width: 435px) {
     padding-top: 0px;
-  }
-}
-
-.grid-wrapper {
-@media (max-width: 435px) {
-    display:none;    
-  }
-}
-
-.grid-mobile{
-@media (min-width: 435px) {
-    display:none;    
-    background-color:yellow;
   }
 }
