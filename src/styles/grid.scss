@@ -17,6 +17,14 @@
       opacity: 0.3;
     }
   }
+
+  .square {
+    @media (max-width: 435px) {
+      width: 90%;   
+    }
+  }
+
+
   
   .grid {
     height: 600px;
