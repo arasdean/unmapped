@@ -6,8 +6,12 @@ export default function Item({
   color = "blue",
   clicked,
   handle,
-  image
+  image,
+  imageBackgroundId
 }) {
+
+  const imageBackgroundIdName = 'id' + imageBackgroundId;
+
   return (
     
     <div
@@ -16,10 +20,12 @@ export default function Item({
       style={clicked ? { opacity: '.3' } : null}
     >
       <div 
+      id={imageBackgroundIdName}
       className="square" 
-      style={{ backgroundImage: `url(${image})` }}>
-      {header}
+      >
+      {header} 
       </div>
     </div>
   );
 }
+

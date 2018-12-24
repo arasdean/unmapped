@@ -14,10 +14,43 @@
       opacity: 0.3;
     }
     background-size: cover;
-    text-shadow: 1px 1px #000, 
-                2px 2px #000, 
-                3px 3px #000;
   }
+
+#id0{
+  background-image: linear-gradient( rgba(51, 51, 51, 0.45), rgba(51, 51, 51, 0.45) ),url("https://images.pexels.com/photos/69815/florida-state-university-westcott-building-auditorium-interior-69815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#id1{
+  background-image: linear-gradient( rgba(51, 51, 51, 0.45), rgba(51, 51, 51, 0.45) ),url("https://images.pexels.com/photos/262918/pexels-photo-262918.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#id2{
+  background-image: linear-gradient( rgba(51, 51, 51, 0.45), rgba(51, 51, 51, 0.45) ),url("https://images.pexels.com/photos/533671/pexels-photo-533671.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#id3{
+  background-image: linear-gradient( rgba(51, 51, 51, 0.45), rgba(51, 51, 51, 0.45) ),url("https://images.pexels.com/photos/20967/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#id4{
+  background-image: linear-gradient( rgba(51, 51, 51, 0.45), rgba(51, 51, 51, 0.45) ),url("https://images.pexels.com/photos/1115166/pexels-photo-1115166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#id5{
+  background-image: linear-gradient( rgba(51, 51, 51, 0.45), rgba(51, 51, 51, 0.45) ),url("https://images.pexels.com/photos/974320/pexels-photo-974320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#id6{
+  background-image: linear-gradient( rgba(51, 51, 51, 0.45), rgba(51, 51, 51, 0.45) ),url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#id7{
+  background-image: linear-gradient( rgba(51, 51, 51, 0.45), rgba(51, 51, 51, 0.45) ),url("https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#id8{
+  background-image: linear-gradient( rgba(51, 51, 51, 0.45), rgba(51, 51, 51, 0.45) ),url("https://images.pexels.com/photos/269948/pexels-photo-269948.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
 
 .col-4 {
   @media (max-width: 600px){

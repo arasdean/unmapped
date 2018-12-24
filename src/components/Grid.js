@@ -20,6 +20,7 @@ export default class Grid extends React.Component {
                   header={row[num].name}
                   handle={this.props.handler}
                   clicked={clickedState[row[num].name]}
+                  imageBackgroundId={row[num].key}
                 />
                ))}
                </div>
