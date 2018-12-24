@@ -15,8 +15,8 @@
     height: 50px; 
     padding-top: 10px;
     background: #6dec67;
-    text-align: center;
     color: #fff; 
+    text-align: center;
 } 
 
 .interest-container{
@@ -26,17 +26,11 @@
     text-align: center;
 }
 
-.grid {
-    display: flex;
-    flex-direction: row;
-    flext-wrap: wrap;
-}
-
-.row2 {
-    width: 33%;
-    min-width: 350px;
-    display: inline-flex;
-    flex-direction: row;
+.row {
+@media (max-width: 600px) {
+    
+  margin-right: 0;
+  margin-left: 0;}
 }
 
 .breadcrumb {
