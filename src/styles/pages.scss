@@ -12,8 +12,9 @@
 }
 
 .breadcrumb {
+    display: flex;
+    justify-content: center;
     height: 50px; 
-    padding-top: 10px;
     background: #6dec67;
     color: #fff; 
     text-align: center;
@@ -35,6 +36,6 @@
 
 .breadcrumb {
 @media (max-width: 435px) {
-    padding-top: 0px;
+    padding-top: 2px;
   }
 }
