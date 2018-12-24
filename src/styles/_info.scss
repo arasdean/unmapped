@@ -15,7 +15,6 @@
 
 .info-content {
     margin-bottom: 20px;
-    width: 100%;
 }
 
 .item {
@@ -63,13 +62,9 @@
     .info-content {
         display: flex;
         flex-direction: column;
-        overflow: hidden;
-        margin: 0 auto;
        
     }
     .info-block {
-        overflow: hidden;
         justify-content: center;
-        margin: 0 auto;
     }
 }
