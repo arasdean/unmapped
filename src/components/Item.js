@@ -6,14 +6,20 @@ export default function Item({
   color = "blue",
   clicked,
   handle,
+  image
 }) {
   return (
+    
     <div
-      className="square"
+      className="col-4"
       onClick={() => handle(header)}
       style={clicked ? { opacity: '.3' } : null}
     >
+      <div 
+      className="square" 
+      style={{ backgroundImage: `url(${image})` }}>
       {header}
+      </div>
     </div>
   );
 }
