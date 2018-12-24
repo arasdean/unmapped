@@ -1,10 +1,11 @@
 import React from 'react';
 
 const InfoSection = () => (
-    <div className="info-section">
+    <div>
         <h1 className="info-section__main-header">
             Get an Experience Catered For You
         </h1>
+    <div className="info-section">
         <div className="info-block">
             <div className="info-content">
                 <div className="item">
@@ -36,6 +37,7 @@ const InfoSection = () => (
                 </div>
             </div>
         </div>
+    </div>
     </div>
 )
 

@@ -1,5 +1,5 @@
 .info-section {
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -63,6 +63,8 @@
         display: flex;
         flex-direction: column;
         margin: 20px 20pxg;
+        width: 575px;
+        align-items: center;
        
     }
     .info-block {
