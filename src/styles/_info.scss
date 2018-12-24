@@ -58,11 +58,11 @@
     color: gray;
 }
 
-@media (max-width: 675px) {
+@media (max-width: 575px) {
     .info-content {
         display: flex;
         flex-direction: column;
-        margin: 20px 20px;
+        margin: 20px 20pxg;
        
     }
     .info-block {
