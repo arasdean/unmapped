@@ -10,12 +10,12 @@
 
 .info-block {
     height: auto;
-    width: 100%;
     margin: 50px auto;
 }
 
 .info-content {
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .item {
@@ -59,13 +59,17 @@
     color: gray;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 675px) {
     .info-content {
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        margin: 0 auto;
+       
     }
     .info-block {
         overflow: hidden;
+        justify-content: center;
+        margin: 0 auto;
     }
 }
