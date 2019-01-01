@@ -3,6 +3,9 @@ $green: #2cb066;
 .dashboard {
     display: flex;
     justify-content: space-evenly;
+    @media (max-width: 600px){
+        flex-direction: column; 
+    }
 }
 
 .header {
@@ -92,14 +95,21 @@ $green: #2cb066;
 .dashboard-left {
     width: 50%;
     position: relative;
+    @media (max-width: 600px){
+      width: 100%; 
+    }
 }
+
+.dashboard-bottom {
+    display: flex; 
+    justify-content: center; 
+} 
 
 .submit-button {
     position: absolute;
     margin-top: 20px;
     margin-bottom: 10px;
     bottom: 0px;
-    left: 50%;
     transform: translateX(-50%);
     background-color: $green;
     padding: 15px 10px;
@@ -108,3 +118,4 @@ $green: #2cb066;
     border-radius: 5px;
     font-weight: bolder;
 }
+
