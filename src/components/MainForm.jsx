@@ -41,7 +41,7 @@ class MainForm extends Component {
   };
 
   submit = (values) => {
-    // this.nextStep();
+    this.nextStep();
     const {d, groupSize, price, start, end} = values;  
     const { name, email, guide, interests, contactPref, referral, extra} = this.state; 
     const finalData = {price, start, end, groupSize, interests, d, guide, referral, contactPref, extra} 
@@ -49,9 +49,6 @@ class MainForm extends Component {
       name: name, 
       email: email,
       message: finalData, 
-    })
-    .then(function (response) {
-      console.log(response.status); 
     })
     .catch(function (error) {
       console.log(error);
