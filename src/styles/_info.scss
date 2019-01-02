@@ -14,7 +14,8 @@
 }
 
 .info-content {
-    margin-bottom: 20px;
+    display: flex; 
+    justify-content: center;
 }
 
 .item {
@@ -62,8 +63,10 @@
     .info-content {
         display: flex;
         flex-direction: column;
-        margin: 20px 20pxg;
-       
+        align-items: center; 
+        h3 { 
+            text-align: center; 
+        }
     }
     .info-block {
         justify-content: center;
