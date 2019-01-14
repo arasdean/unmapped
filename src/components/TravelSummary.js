@@ -17,10 +17,10 @@ const TravelSummary = ({data, handleChange}) => (
         <div className="summary-text"><b>Tour Guide</b></div>
         <div className="summary-text">{data.values.guide}</div>
         <div className="gray-line"></div>
-        <div className="pricing-container">
+        {/* <div className="pricing-container">
             <div className="summary-total"></div>
             <div className="summary-total">{'$' + data.price}</div>
-        </div>
+        </div> */}
     </div>
 );
 
