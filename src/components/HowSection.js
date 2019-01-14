@@ -4,7 +4,7 @@ import '../styles/_how.scss';
 const HowSection = () => (
     <div className="info-section" id="how">
         <h1 className="info-section__main-header">
-            Get an Experience Catered For You
+            How It Works
         </h1>
         <div className='how-row'>
           <div className='how-col'> 

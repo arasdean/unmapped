@@ -1,7 +1,7 @@
 import React from 'react';
 
 const InfoSection = () => (
-    <div className="info-section">
+    <div className="info-section" id='experience'>
         <h1 className="info-section__main-header">
             Get an Experience Catered For You
         </h1>

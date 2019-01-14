@@ -8,9 +8,8 @@ import HowSection from '../components/HowSection.js';
 const LandingPage = () => (
     <div>
             <HeroSection />
-            <InfoSection />
             <HowSection /> 
-            <LocationSection />
+            <InfoSection />
             <Footer />
     </div>
 );
