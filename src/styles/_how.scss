@@ -26,3 +26,38 @@ h3 {
     text-align: center;
     color: #73d13d; 
 }
+
+.about {
+    width: 75%;
+    padding: 10px;
+    ul {
+         list-style-type: none;
+    }
+    li {
+        padding-bottom: 15px;
+        font-weight: bold;
+    } 
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+}
+
+.vision {
+    width: 75%;
+    padding: 10px;
+}
+
+.vision-section {
+    display: flex;
+    justify-content: center;
+}
+
+.video-section {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }  
+}

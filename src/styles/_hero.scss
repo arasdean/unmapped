@@ -19,7 +19,7 @@
   .nav_column {
     display: -webkit-box;
     display: -webkit-flex;
-    width: 30%; 
+    width: 35%; 
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
@@ -30,6 +30,9 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;  
+    a {
+      padding-right: 10px;
+    }
     @media (max-width: 600px) {
       display: none; 
     }  

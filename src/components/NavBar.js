@@ -19,12 +19,18 @@ const NavBar = () => (
                     <ul id="menu">
                         <li><a href="#how">How It Works</a></li>
                         <li><a href="#experience">Experiences</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#vision">Vision</a></li>
+                        <li><a href="#story">Our Story</a></li>
+                        <li><a href="mailto: hello@unmapped.io">Contact</a></li>
                     </ul>
             </nav>
                 <div className="nav_column">
-                    <a href='#how'> <h4> How It Works </h4></a>
-                    <a href='#experience'> <h4> Experience </h4></a>
+                    <a href='#how'> <h4> How It Works</h4></a>
+                    <a href='#experience'><h4> Experience </h4></a>
+                    <a href="#about"><h4> About </h4></a>
+                    <a href="#vision"><h4> Vision </h4></a>
+                    <a href="#story"><h4>Our Story</h4></a>
                     <a href="mailto: hello@unmapped.io" className="nav_link w-inline-block">
                         <h4>Contact</h4>
                     </a>

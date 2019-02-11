@@ -43,8 +43,9 @@ class MainForm extends Component {
   submit = (values) => {
     this.nextStep();
     const {d, groupSize, price, start, end} = values;  
-    const { name, email, guide, interests, contactPref, referral, extra} = this.state; 
-    const finalData = {price, start, end, groupSize, interests, d, guide, referral, contactPref, extra} 
+    const { name, email, number, guide, interests, contactPref, referral, extra} = this.state; 
+    const finalData = {price, start, end, groupSize, number, interests, d, guide, referral, contactPref, extra} 
+    console.log(finalData); 
     axios.post('https://few3sktvhi.execute-api.us-east-1.amazonaws.com/v1/', {
       name: name, 
       email: email,

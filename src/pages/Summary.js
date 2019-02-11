@@ -29,7 +29,7 @@ export default class Summary extends React.Component {
                                 <input id="number" onChange={this.props.handleChange('number')} className="contact-input" type="text" placeholder="Phone Number" />
                             </div>
                             <div className='email-form'>
-                                <input id="name" onChange={this.props.handleChange('name')} className="contact-input" type="name" placeholder="Referral Code (optional)" />
+                                <input id="referral" onChange={this.props.handleChange('referral')} className="contact-input" type="name" placeholder="Referral Code (optional)" />
                             </div>
                             
                         </div>
